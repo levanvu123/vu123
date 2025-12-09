@@ -1,15 +1,150 @@
-h1 {
-  color: red; 
-  text-align: center; 
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f2f5;
 }
-#para1 {
-  color: yellow; 
-  font-size: 13px; 
-  font-family: Arial, sans-serif; 
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 5px;
 }
-#para2 {
-  background-color: yellow; 
-  font-weight: bold; 
-  font-size: 13px; 
-  font-family: "Times New Roman", Times, serif; 
+
+/* ------------------------------------------- */
+/* --- Yêu cầu 1: Vùng 1 - Thanh Liên Kết --- */
+/* ------------------------------------------- */
+#vung-1 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    /* Đặt các liên kết hiển thị theo hàng ngang */
+    display: flex;
+    justify-content: space-around; /* Phân bổ đều giữa các liên kết */
+}
+
+.nav-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* :link - Trạng thái mặc định ("Trong Chờ") */
+.nav-link:link {
+    color: #2980b9;
+    background-color: #ecf0f1;
+    border-color: #2980b9;
+}
+
+/* :visited - Trạng thái liên kết đã được thăm ("Thông Tin" / Đã kiểm tra) */
+.nav-link:visited {
+    color: #7f8c8d;
+    background-color: #f7f9f9;
+    border-color: #7f8c8d;
+}
+
+/* :hover - Trạng thái khi di chuột qua */
+.nav-link:hover {
+    color: white;
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* :active - Trạng thái khi liên kết đang được nhấn ("Phục Vụ" / Hành động đang diễn ra) */
+.nav-link:active {
+    color: white;
+    background-color: #27ae60; 
+    transform: translateY(1px);
+}
+
+
+/* ------------------------------------------- */
+/* --- Yêu cầu 2: Vùng 2 - Form --- */
+/* ------------------------------------------- */
+#vung-2 {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc; /* Thêm đường viền như trong hình vẽ */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Định dạng cho input và select */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+/* Định dạng cho Checkbox Group (Sở thích) */
+.hobbies label {
+    display: inline-block; /* Cho phép label của sở thích nằm ngang */
+    margin-right: 15px;
+    font-weight: normal;
+}
+.hobbies input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Nút Đăng Nhập và Thoát */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 48%; /* Chia đều cho hai nút */
+}
+
+.submit-btn {
+    /* Nút Đăng Nhập */
+    background-color: #3498db;
+    color: white;
+}
+
+.reset-btn {
+    /* Nút Thoát (reset) */
+    background-color: #e74c3c;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
 }
