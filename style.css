@@ -1,163 +1,17 @@
-/* Thiết lập cơ bản */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #2c3e50; /* Nền tối hơn */
+/* The parent container */
+.day {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 30px 0;
+    background-color: #2196F3; /* Blue background */
+    padding: 10px;
 }
 
-/* Wrapper để đặt Vùng 2 và Vùng 3 cạnh nhau */
-.main-content-wrapper {
-    display: flex;
-    gap: 30px;
-    margin-top: 30px;
-    align-items: flex-start;
-    max-width: 900px; /* Tăng chiều rộng để chứa cả hai vùng */
-    width: 90%;
-}
-
-/* Định dạng thanh điều hướng (Vùng 1) */
-.header-nav {
-    display: flex; 
-    justify-content: center; 
-    margin-bottom: 30px; 
-    padding: 15px 30px;
-    background-color: #34495e; /* Nền xám đậm */
-    border: 2px solid #3498db; /* Khung màu xanh sáng */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 600px;
-    gap: 40px; 
-}
-
-.nav-item {
-    text-decoration: none; 
-    color: #ecf0f1; /* Chữ màu trắng sáng */
-    font-weight: 600;
-    padding: 5px 10px;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 4px;
-}
-
-.nav-item:hover {
-    color: #3498db;
-    background-color: #4a637a;
-}
-
-/* Định dạng Bảng Điểm (Vùng 2) */
-.table-container {
-    background-color: #1abc9c; /* MÀU NỀN: Xanh ngọc */
+/* The flex items */
+.day > div {
+    background-color: #f1f1f1; /* Light grey background */
+    margin: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid #16a085; /* KHUNG MÀU: Xanh ngọc đậm */
-    flex: 1; /* Chiếm 1 phần không gian */
-    max-width: 350px; 
-    color: #fff;
-    text-align: center;
-}
-
-.table-container h3 {
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse; 
-    text-align: left;
-    margin-top: 10px;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #16a085;
-    color: #fff;
-}
-
-thead tr {
-    background-color: #16a085; 
-    font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #1abc9c; 
-}
-
-tbody tr:hover {
-    background-color: #119a84; 
-}
-
-/* Định dạng khung biểu mẫu (Vùng 3) */
-.form-container {
-    background-color: #ecf0f1; /* MÀU NỀN: Trắng xám nhạt */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid #e74c3c; /* KHUNG MÀU: Đỏ cam */
-    flex: 1; /* Chiếm 1 phần không gian */
-    max-width: 350px;
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* ... (Giữ nguyên các định dạng form cơ bản khác) ... */
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; 
-}
-
-/* Định dạng nút Sở thích */
-.so-thich-buttons {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.tag-button {
-    background-color: #3498db; /* Màu xanh dương */
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s;
-}
-
-.tag-button:hover {
-    background-color: #2980b9;
-}
-
-/* Định dạng nút Đăng ký */
-.submit-button {
-    width: 100%;
-    background-color: #e74c3c; /* Màu đỏ cam */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.2s;
-}
-
-.submit-button:hover {
-    background-color: #c0392b;
+    font-size: 25px;
+    flex: 1;                 /* Ensures items grow equally */
+    text-align: center;      /* Centers the text */
+    font-family: Arial, sans-serif;
 }
